@@ -11,7 +11,7 @@
 El sitio cuenta con una arquitectura de sección única (Single Page) optimizada para la navegación rápida (Scroll) y una estética oscura clásica del género Blues.
 
 - **01 Historia:** Introducción al perfil artístico de Roberto Porzio.
-- **02 Música (Listen):** Reproductor interactivo con una selección de temas originales y covers (ej. *Chicago Night*, *Sweet Home Chicago*).
+- **02 Música (Listen):** Reproductor de Spotify con una selección de temas originales y covers (ej. *Forty Days & Forty Nights*, *Walk On*).
 - **03 Libros:** Catálogo y tienda de ediciones independientes escritas por el artista (precios integrados en ARS).
 - **04 Fechas (Live):** Agenda actualizada de shows en vivo con locaciones, horarios y accesos a información de reservas.
 - **05 Galería (Moments):** Registro visual interactivo de presentaciones en vivo.
