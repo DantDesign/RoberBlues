@@ -332,6 +332,70 @@ button {
 
 
 /* =========================================================
+   ANIMACIONES Y MEJORAS DE BOTONES (Añadir o reemplazar)
+========================================================= */
+
+/* Definición de la micro-vibración de guitarra */
+@keyframes guitarVibe {
+    0% { transform: translateY(-2px) translate(0, 0); }
+    20% { transform: translateY(-2px) translate(-1.5px, 1px); }
+    40% { transform: translateY(-2px) translate(1.5px, -1px); }
+    60% { transform: translateY(-2px) translate(-1px, -1px); }
+    80% { transform: translateY(-2px) translate(1px, 1.5px); }
+    100% { transform: translateY(-2px) translate(0, 0); }
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    
+    /* Agregamos transform a la transición para que suavice el escalado */
+    transition: background .3s ease, color .3s ease, border-color .3s ease, transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow .3s ease;
+}
+
+/* Efecto clic físico general para ambos botones (Push) */
+.btn:active {
+    transform: scale(0.96) translateY(0) !important;
+}
+
+/* --- BOTÓN ESCUCHAR MÚSICA (.btn-primary) --- */
+.btn-primary {
+    background: var(--red);
+    color: var(--cream);
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+    background: var(--red-light);
+    /* Se activa la vibración blusera manteniendo la elevación del botón */
+    animation: guitarVibe 0.25s linear infinite alternate;
+    /* Resplandor sutil con la variable del rojo claro */
+    box-shadow: 0 0 20px rgba(196, 71, 54, 0.4);
+}
+
+/* --- BOTÓN VER FECHAS (.btn-outline) --- */
+.btn-outline {
+    border: 1px solid var(--cream);
+    background: transparent;
+    color: var(--cream);
+}
+
+.btn-outline:hover {
+    background: var(--cream);
+    color: var(--black);
+    /* Escalado fluido hacia adelante */
+    transform: scale(1.04) translateY(-2px);
+    /* Sombra elegante que despega el botón del fondo negro */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* =========================================================
    GENERAL SECTIONS
 ========================================================= */
 
