@@ -15,7 +15,7 @@ El sitio cuenta con una arquitectura de sección única (Single Page) optimizada
 - **03 Libros:** Catálogo y tienda de ediciones independientes escritas por el artista (precios integrados en ARS).
 - **04 Fechas (Live):** Agenda actualizada de shows en vivo con locaciones, horarios y accesos a información de reservas.
 - **05 Galería (Moments):** Registro visual interactivo de presentaciones en vivo.
-- **06 Contacto:** Canales directos integrados (Email, Instagram, YouTube y WhatsApp) para contrataciones y prensa.
+- **06 Contacto:** Canales directos integrados (Email, Instagram, Spotify, YouTube y WhatsApp) para contrataciones y prensa.
 
 ---
 
