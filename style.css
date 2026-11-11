@@ -1,12 +1,4 @@
-/* =========================================================
-   ROBERTO BLUES
-   STYLE.CSS
-========================================================= */
-
-
-/* =========================================================
-   VARIABLES
-========================================================= */
+/* ==============VARIABLES=============== */
 
 :root {
     --black: #090909;
@@ -90,7 +82,6 @@ button {
     border-bottom: 1px solid rgba(255, 255, 255, .08);
 
     background: rgba(9, 9, 9, .78);
-
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
@@ -200,28 +191,24 @@ button {
     display: flex;
     align-items: center;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, .95) 0%,
-            rgba(0, 0, 0, .68) 45%,
-            rgba(0, 0, 0, .28) 100%
-        ),
-        url("images/roberto-hero.jpg")
-        center / cover no-repeat;
+ /* imagen de fondo */
+    background-image: url('images/DSC_7169.jpg');
+    background-size: cover;       /* Cubre todo sin deformarse */
+    background-position: 35% center;  /* Centra la foto, un poco a la derecha */
+    background-repeat: no-repeat;
+
 }
 
 .hero-overlay {
     position: absolute;
-
     inset: 0;
 
-    background:
-        radial-gradient(
-            circle at 70% 50%,
-            rgba(165, 43, 32, .20),
-            transparent 35%
-        );
+background: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.55), 
+        rgba(0, 0, 0, 0.8)
+    );
+    z-index: 1;
 }
 
 .hero-content {
@@ -287,7 +274,23 @@ button {
 
 .btn-primary {
     background: var(--red);
+
+display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px; /* Espacio entre el triangulo y ESCUCHAR */
 }
+
+/* Tamaño y color del triángulo de Play */
+.play-icon {
+    display: block;       /* Elimina el espacio de línea base de elementos inline */
+    width: 10px;
+    height: 11px;
+    fill: currentColor;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
 
 .btn-primary:hover {
     background: var(--red-light);
@@ -1402,6 +1405,11 @@ button {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .hero {
+        /* Reajustamos el encuadre porque la pantalla empieza a ser más vertical */
+        background-position: 42% center;
+    }
+
 }
 
 
@@ -1458,7 +1466,6 @@ button {
 
     .story-grid {
         grid-template-columns: 1fr;
-
         gap: 45px;
     }
 
@@ -1475,7 +1482,6 @@ button {
 
     .section-description {
         width: auto;
-
         margin-top: 25px;
     }
 
@@ -1512,7 +1518,6 @@ button {
 
     .date-button {
         grid-column: 2;
-
         max-width: 100px;
     }
 
@@ -1543,7 +1548,6 @@ button {
 
     .contact-grid {
         grid-template-columns: 1fr;
-
         gap: 45px;
     }
 
@@ -1552,9 +1556,7 @@ button {
 
     .footer-content {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 20px;
     }
 
@@ -1571,15 +1573,18 @@ button {
         padding: 90px 0;
     }
 
+.hero {
+        /* Volvemos a centrar un poco más para no cortar al guitarrista en vertical */
+        background-position: 48% top;
+    }
+
     .hero-buttons {
         flex-direction: column;
-
         align-items: stretch;
     }
 
     .btn {
         width: 100%;
-
         text-align: center;
     }
 
@@ -1598,9 +1603,7 @@ button {
     /* TRACKLIST */
 
     .track {
-        grid-template-columns:
-            40px
-            1fr;
+        grid-template-columns: 40px 1fr;
     }
 
     .track small {
@@ -1616,7 +1619,6 @@ button {
 
     .gallery-item {
         height: 250px;
-
         margin-bottom: 10px;
     }
 
@@ -1638,4 +1640,15 @@ button {
         margin-top: 30px;
     }
 
+}
+
+/* ==================== */
+.btn-primary .play-icon {
+    display: inline-block !important;
+    width: 10px !important;
+    height: 11px !important;
+    position: relative !important;
+    top: 2px !important;
+    margin: 0 14px 0 0 !important; /*Separación con la palabra */
+    vertical-align: baseline !important;
 }
